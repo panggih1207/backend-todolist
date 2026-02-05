@@ -1,6 +1,6 @@
 // route utama = untuk server utama, seperti menyimpan API, create, Update, Delete
 
-import express from "express";
+import express, { Router } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -18,6 +18,8 @@ app.use(express.json());
 
 // mengakses port dari env
 const PORT = process.env.PORT || 3001;
+
+app.use (Router)
 
 // untuk menampilkan di gitbash jika server sudah berjalan
 app.listen(() => console.log(`

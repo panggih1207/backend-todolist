@@ -1,0 +1,18 @@
+
+generator client {
+  provider = "prisma-client"
+  output   = "./generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Todos {
+  id          String         @id   @default(uuid())
+  name_product String        
+  status       Boolean             @default(false)
+  price        Int                 
+  created_at   DateTime            @default(now())
+  update_at    DateTime            @updatedAt
+}
